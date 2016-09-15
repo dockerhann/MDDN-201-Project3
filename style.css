@@ -7,7 +7,35 @@ body, html {
   padding: 0;
 
 }
-p, a, ul {
+#vr{
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  background-image: url("img/infoImg.png");
+  filter: gray alpha(opacity=100);
+  -webkit-filter: grayscale(15%);
+
+}
+input {
+  width: 45%;
+  opacity: 0.6;
+  color: #10233e;
+}
+
+
+#vrload{
+  margin-top: 20%;
+  text-align: center;
+  background-color: #020e21;
+  opacity: 0.5;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  font-size: 2.5em;
+}
+#vrload p{
+  opacity: 1;
+}
+p, a, ul, button, input {
   list-style: none;
   text-decoration: none;
   font-family: 'Dosis', sans-serif;
@@ -64,7 +92,7 @@ p, a, ul {
 
   width: 100%;
 
-  padding-top: 30.5%;
+  padding-top: 16.5%;
 
 }
 
@@ -73,14 +101,75 @@ p, a, ul {
 }
 
 #logo{
-  margin-left: 15%;
+  padding-left: 2%;
+  padding-right: 2%;
   width:50%;
 }
 
+#new {
+  opacity: 0.6;
+  background-color: #10233e;
+  margin-left: 15%;
+  font-size: 2em;
+  padding: 0.5%;
+
+  margin-top:-10%;
+}
+
+button {
+  opacity: 0.6;
+  background-color: #10233e;
+  z-index: 2
+  border: none;
+  font-size: 2em;
+  outline: 0;
+}
+
+input, form form input, form p{
+  margin-left: 75%;
+  text-align: center;
+  width: 6%;
+}
+input{
+  color: #10233e;
+}
+#scroll{
+  text-align: center;
+  font-size: 2em;
+  opacity: 0.6;
+}
+
+#go{
+    background-color: #10233e;
+    outline: 0;
+    border: none;
+    width: 6.3%;
+    color: #fff;
+}
+.find{
+  text-align: center;
+  font-size: 2em;
+  opacity: 0.8;
+}
+
+#banner{
+  padding-bottom: 20%;
+}
+#findInfo{
+  width: 40%;
+  padding-top: 12%;
+  margin-left: 30%;
+  font-size: 1.5em;
+}
+
 #info{
-  padding-top:30%;
+  margin-top: 10%;
+  padding-top:5%;
+  padding-bottom: 5%;
   margin-top: 23%;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url("img/socialMedia.png");
+  background-image: url("img/infoImg.png");
+  filter: gray alpha(opacity=100);
+  -webkit-filter: grayscale(50%);
 }

@@ -32,24 +32,36 @@
     <div id="spacer"><a  href="home.html"><img id="logo_cnr" src="img/logo.png"/></a></div>
     <div id="intro">
 
-      <a href="login.html">I'm new</a>
+      <p class="find">Find out what the internet knows about you. </p>
+      <a href="login.html" id="new">I'm new</a>
       <image id="logo" src = "img/logo.png"/>
-      <button id="returningUserButton" onclick="toggle_visibility('returning')">returning</button>
+
+
+      <button  style="border:none" id="returningUserButton" onclick="toggle_visibility('returning')">returning</button>
 
       <form id="returning">
         <p>what's your name?</p>
         <input id="name" required></input>
         <form action="login.html">
-          <input type="button" onclick="location.href='vr.html';" value="Go" />
+          <input id="go" type="button" onclick="location.href='vr.html';"value="Go" />
         </form>
       </form>
 
-      <p>scroll for <a href="#info">info</a></p>
+      <p id="scroll">scroll for <a href="#info">info</a></p>
 
 
       <div id="info">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed dui ullamcorper, molestie nibh eget, pretium urna. Suspendisse potenti. Phasellus libero nisl, interdum vitae finibus scelerisque, tristique sit amet neque. Quisque egestas, turpis quis hendrerit iaculis, est velit lacinia sem, sed accumsan elit orci ac velit. Integer interdum tortor luctus elementum ultrices. Praesent nec mauris a odio rhoncus tristique. Curabitur consequat varius lobortis. Donec nibh nisl, dignissim sed purus venenatis, volutpat auctor risus.
-
+        <p class="find" id="banner">
+          LOGIN to social media. SCAN your facial features. findYOURSELF.
+        </p>
+        <p class="find" id="findInfo">
+          The aim of FindYourself is to return to you power over
+          your personal details, giving back your control over your online personality.
+FindYourself is an online search engine that scours the web
+for your digital data, then creates your unique personality profile based on this information.
+Your personality profile will be generated as a virtual environment, showing you where each piece of
+information came from,  and how it altered your online presence. In this space, you will be able to
+edit and remove any information that you don't want made public. FindYourself puts the power back in your hands.
         </p>
 
 
