@@ -6,6 +6,8 @@
   <head>
     <title>FindYOURSELF</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Dosis:200" rel="stylesheet">
+
     <link rel="stylesheet" href="reset.css"/>
     <link rel="stylesheet" href="loginstyle.css"/>
 
@@ -24,10 +26,14 @@
       </nav>
 
     </div>
-
+    <div id="spacer"><a  href="home.html"><img id="logo_cnr" src="img/logo.png"/></a></div>
     <div id="start">
-      <p>scroll</p>
-      <a href="home.html">Home</a>
+
+      <h1>WELCOME!</h1>
+      <p>scroll to findYourself</p>
+      <image  id="startimg" src = "img/scroll.png"/>
+
+
 
 
       <!-- <img id="start_img" src="img/homeScreen.png"/> -->
@@ -35,116 +41,100 @@
     </div>
 
     <div id="social_media">
-
-
-      <div id="facebook" class="mediaSpace">
-        <div class="media">
-          <p>FACEBOOK</p>
-        </div>
-        <form>
-          <label for "username">Username:</label>
-          <input id="firstname" required>
-        </form>
-
-      </div>
-      <div class="mediaSpace" id="twitter">
-        <div class="media">
-          <p>TWITTER</p>
-        </div>
-        <form>
-          <label>Username:</label>
-          <input id="firstname" required><br>
-        </form>
-      </div>
-      <div id="google" class="mediaSpace">
-        <div class="media">
-          <p>GOOGLE</p>
-        </div>
-        <form>
-          <label>Username:</label>
-          <input type="text" name="firstname" required><br>
-        </form>
+      <div id = "mediaText">
+        <p>log in to social media</p>
       </div>
 
-      <div class="mediaSpace" id="linkedIn">
-        <div class="media">
-          <p>linkedIn</p>
+      <div id="MEDIA">
+        <div class="mediaSpace" id="twitter">
+          <div class="media">
+            <image src = "img/mediaImg.png"/>
+          </div>
+          <form>
+            <label>Username:</label><br>
+            <input id="firstname" required><br>
+          </form>
         </div>
-        <form>
-          <label>Username:</label>
-          <input type="text" name="firstname" required><br>
-        </form>
-      </div>
-      <div id="other" class="mediaSpace">
-        <div class="media">
-          <p>PINTEREST</p>
+        <div id="google" class="mediaSpace">
+          <div class="media">
+            <image src = "img/mediaImg.png"/>
+          </div>
+          <form>
+            <label>Username:</label><br>
+            <input type="text" name="firstname" required><br>
+          </form>
+        </div>
+
+        <div class="mediaSpace" id="linkedIn">
+          <div class="media">
+            <image src = "img/mediaImg.png"/>
+          </div>
+          <form>
+            <label>Username:</label><br>
+            <input type="text" name="firstname" required><br>
+          </form>
+        </div>
+        <div id="pinterest" class="mediaSpace">
+          <div class="media">
+            <image src = "img/mediaImg.png"/>
+
+          </div>
+          <form>
+            <label>Username:</label><br>
+            <input type="text" name="firstname" required><br>
+
+          </form>
+        </div>
+
+        <div id="tumblr" class="mediaSpace">
+          <div class="media">
+            <image src = "img/mediaImg.png"/>
+          </div>
+          <form>
+            <label for "username">Username:</label><br>
+            <input id="firstname" required>
+          </form>
 
         </div>
-        <form>
-          <label>Username:</label>
-          <input type="text" name="firstname" required><br>
-
-        </form>
-      </div>
-
-      <div id="facebook" class="mediaSpace">
-        <div class="media">
-          <p>FACEBOOK</p>
+        <div class="mediaSpace" id="instagram">
+          <div class="media">
+            <image src = "img/mediaImg.png"/>
+          </div>
+          <form>
+            <label>Username:</label><br>
+            <input id="firstname" required><br>
+          </form>
         </div>
-        <form>
-          <label for "username">Username:</label>
-          <input id="firstname" required>
-        </form>
+        <div id="youtube" class="mediaSpace">
+          <div class="media">
+            <image src = "img/mediaImg.png"/>
+          </div>
+          <form>
+            <label>Username:</label><br>
+            <input type="text" name="firstname" required><br>
+          </form>
+        </div>
 
-      </div>
-      <div class="mediaSpace" id="twitter">
-        <div class="media">
-          <p>TWITTER</p>
+        <div class="mediaSpace" id="reddit">
+          <div class="media">
+            <image src = "img/mediaImg.png"/>
+          </div>
+          <form>
+            <label>Username:</label><br>
+            <input type="text" name="firstname" required><br>
+          </form>
         </div>
-        <form>
-          <label>Username:</label>
-          <input id="firstname" required><br>
-        </form>
-      </div>
-      <div id="google" class="mediaSpace">
-        <div class="media">
-          <p>GOOGLE</p>
-        </div>
-        <form>
-          <label>Username:</label>
-          <input type="text" name="firstname" required><br>
-        </form>
       </div>
 
-      <div class="mediaSpace" id="linkedIn">
-        <div class="media">
-          <p>linkedIn</p>
-        </div>
-        <form>
-          <label>Username:</label>
-          <input type="text" name="firstname" required><br>
-        </form>
-      </div>
-      <div id="other" class="mediaSpace">
-        <div class="media">
-          <p>PINTEREST</p>
-
-        </div>
-        <form>
-          <label>Username:</label>
-          <input type="text" name="firstname" required><br>
-
-        </form>
-      </div>
     </div>
 
 
 
 
     <div id="scan">
-      <button id="scanButton" onclick="document.getElementById('scanImg').style.visibility='visible'">SCAN</button>
+      <button id="scanButton" onclick="document.getElementById('scanImg').style.visibility='visible'" style="border:none;"><p>scan</p></button>
       <img id="scanImg" src="img/scanImg.png"/>
-      <a href="vr.html">SUBMIT</a>
+      <a id="submit" href="vr.html">SUBMIT</a>
     </div>
 
   </body>
