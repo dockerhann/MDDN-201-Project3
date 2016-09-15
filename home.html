@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+
+
+  <head>
+    <title>FindYOURSELF</title>
+
+    <link rel="stylesheet" href="reset.css"/>
+    <link rel="stylesheet" href="style.css"/>
+
+    <script type="text/javascript" src="script/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="script/script.js"></script>
+
+  </head>
+  <body>
+
+
+
+    <div id="header">
+      <a  href="#intro"><img id="logo_cnr" src="img/logo.png"/></a>
+
+      <nav>
+        <ul>
+          <li><a href="#info">INFORMATION</a></li>
+          <li><a href="home.html">HOME</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <div id="intro">
+
+      <a href="login.html">I'm new</a>
+      <button id="returningUserButton" onclick="toggle_visibility('returning')">returning</button>
+
+      <form id="returning">
+        <p>what's your name?</p>
+        <input id="name" required></input>
+        <form action="login.html">
+          <input type="button" onclick="location.href='vr.html';" value="Go" />
+        </form>
+      </form>
+
+      <p>scroll for <a href="#info">info</a></p>
+
+
+      <div id="info">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed dui ullamcorper, molestie nibh eget, pretium urna. Suspendisse potenti. Phasellus libero nisl, interdum vitae finibus scelerisque, tristique sit amet neque. Quisque egestas, turpis quis hendrerit iaculis, est velit lacinia sem, sed accumsan elit orci ac velit. Integer interdum tortor luctus elementum ultrices. Praesent nec mauris a odio rhoncus tristique. Curabitur consequat varius lobortis. Donec nibh nisl, dignissim sed purus venenatis, volutpat auctor risus.
+
+        </p>
+
+
+
+      </div>
+    </div>
+
+
+  </body>
+</html>

@@ -1,23 +1,11 @@
-/*set document elements style*/
-
 body, html {
   height: 100%;
   width: 100%;
   display: block;
   margin: 0;
   padding: 0;
-}
 
-a, ul {
-  list-style: none;
-  text-decoration: none;
 }
-
-div {
-  vertical-align: 0;
-}
-
-/*header style*/
 
 #header {
   background-color: #CCE0FF;
@@ -25,6 +13,7 @@ div {
   min-height: 6%;
   position: fixed;
   padding: 0.5%;
+  margin-top: 0;
 }
 
 #header li {
@@ -38,121 +27,29 @@ div {
   max-width: 12%;
 }
 
-#logo_ctr {
-  float: left;
-  margin-left: 0%;
-  max-width: 100%;
-}
 
-/*body style*/
+#intro{
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  background-image: url("img/scan.png");
+  background-color: #1e213c;
 
 
-#login {
-
-  display: block;
-  width:100%;
-}
-
-#start, #social_media, #emails {
   width: 100%;
-  padding-top: 7%;
-  max-height: 23%;
-  float: left;
+
+  padding-top: 30.5%;
+
 }
 
-#start {
-  background-color: #425f8a;
-  padding-bottom: 14%;
-}
-
-
-#social_media1 {
-  background-color: #647f9b;
-  margin-left: 22%;
-  height:33%;
-}
-
-#social_media2 {
-  padding-left: 30%;
-  height:33%;
-}
-
-.mediaSpace {
-  background-color: #fff;
-  width: 33.333333%;
-
-  padding-top: 20%;
-  padding-bottom: 16%;
-  float: left;
-  border-style: solid;
-}
-
-.media {
-  background-color: red;
-  width: 5%;
-  border-radius: 100%;
-}
-
-
-#linkedIn, #other {
-  padding-top:5%;
-  padding-bottom: 14.8%;
-  padding-right: 16.66%;
-}
-
-.mediaSpace form {
+#returning{
   visibility: hidden;
 }
 
-.mediaSpace .media:hover + form {
-  visibility: visible;
-}
-
-#emails {
-  display:block;
-  background-color: #336699;
-  padding-bottom: 5%;
-}
-
-
-.email {
-  background-color: #fff;
-  max-height: 23%;
-  padding-left: 48%;
-}
-
-
-.login {
-  background-color: red;
-  margin-left: -6%;
-  width: 20%;
-  margin-bottom: 7%;
-  visibility: hidden;
-}
-
-.email p {
-  background-color: red;
-  width: 20%;
-}
-
-.email p:hover + .login {
-  visibility: visible;
-}
-
-.login:hover {
-  visibility: visible;
-}
-
-
-
-
-
-#scan {
-  background-color: red;
-
-}
-
-#scan img {
-  min-width: 100%;
-  margin-bottom: 10%;
+#info{
+  padding-top:30%;
+  margin-top: 23%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("img/socialMedia.png");
 }

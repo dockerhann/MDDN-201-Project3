@@ -1,0 +1,140 @@
+/*set document elements style*/
+
+body, html {
+  height: 100%;
+  width: 100%;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+a, ul {
+  list-style: none;
+  text-decoration: none;
+}
+
+div {
+  vertical-align: 0;
+}
+
+/*header style*/
+
+#header {
+  background-color: #CCE0FF;
+  width:100%;
+  min-height: 6%;
+  position: fixed;
+  padding: 0.5%;
+}
+
+#header li {
+  float: right;
+  padding-right: 5%;
+}
+
+#logo_cnr {
+  float: left;
+  margin-left: 0%;
+  max-width: 12%;
+}
+
+
+/*body style*/
+
+
+#start, #social_media, #scan{
+  width: 100%;
+  float: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#start {
+  background-color: #1e213c;
+  padding-top: 30.5%;
+  padding-bottom: 21.8%;
+  background-image: url("img/homeScreen.png");
+
+  background-position: center bottom;
+}
+
+#start a, #start p{
+  float: left;
+  padding-left: 10%;
+}
+
+#social_media {
+
+  background-color: #171a38;
+  background-image: url("img/socialMedia.png");
+}
+
+
+.mediaSpace {
+  width: 10%;
+
+  padding-top: 22.6%;
+  padding-bottom: 22.6%;
+  float: left;
+  border-style: solid;
+}
+
+.media {
+  background-color: #fff;
+  width: 80%;
+  border-radius: 100%;
+}
+
+
+/*.mediaSpace .media:hover{
+    background-color: #aaa;
+}*/
+
+.mediaSpace form {
+  visibility: hidden;
+}
+
+.mediaSpace .media:hover + form {
+  visibility: visible;
+}
+.mediaSpace form:hover {
+  visibility: visible;
+}
+
+.mediaSpace form input:invalid{
+  background-color: #fff;
+}
+
+.mediaSpace form input:valid{
+  background-color: #bbb;
+}
+
+
+
+
+
+
+
+
+
+
+
+#scan {
+  background-color: #151428;
+  background-image: url("img/scan.png");
+
+}
+
+#scanButton {
+
+  background-color: #fff;
+}
+
+#scanButton:hover {
+    background-color: #ccc;
+}
+
+#scan img {
+  width: 100%;
+  visibility: hidden;
+}
