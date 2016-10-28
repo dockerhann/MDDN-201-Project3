@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 
 <html>
-
-
   <head>
 
     <title>FindYOURSELF</title>
@@ -14,129 +12,238 @@
 
     <script type="text/javascript" src="script/jquery-3.1.0.min.js"></script>
     <script type="text/javascript" src="script/script.js"></script>
+
   </head>
   <body>
-    <div id="header">
-      <a  href="home.html"><img id="logo_cnr" src="img/logo.png"/></a>
 
-      <nav>
-        <ul>
-          <li><a href="home.html">INFORMATION</a></li>
+      <!--Firebase API--->
 
-          <li><a href="home.html">HOME</a></li>
-        </ul>
-      </nav>
+    <script src="https://www.gstatic.com/firebasejs/3.5.1/firebase.js"></script>
 
-    </div>
-    <div id="spacer"><a  href="home.html"><img id="logo_cnr" src="img/logo.png"/></a></div>
+    <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyC0wBB8yj7hAsx5vyU6HxiFnbFNiW_-clw",
+          authDomain: "findyourself-6c0a9.firebaseapp.com",
+          databaseURL: "https://findyourself-6c0a9.firebaseio.com",
+          storageBucket: "findyourself-6c0a9.appspot.com",
+          messagingSenderId: "552181822349"
+        };
+        firebase.initializeApp(config);
+
+
+        firebase.auth().signInWithPopup(Provider).then(function(result) {
+          // This gives you a the Twitter OAuth 1.0 Access Token and Secret.
+          // You can use these server side with your app's credentials to access the Twitter API.
+          var token = result.credential.accessToken;
+          var secret = result.credential.secret;
+          // The signed-in user info.
+          var user = result.user;
+          // ...
+          alert(token);
+        }).catch(function(error) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          // The email of the user's account used.
+          var email = error.email;
+          // The firebase.auth.AuthCredential type that was used.
+          var credential = error.credential;
+          // ...
+      });
+
+      function twitterLogin(){
+          var provider = new firebase.auth.TwitterAuthProvider();
+          firebase.auth().signInWithPopup(provider);
+      }
+
+      function facebookLogin(){
+        var provider = new firebase.auth.FacebookAuthProvider();
+        firebase.auth().signInWithPopup(provider);
+      }
+
+      function googleLogin(){
+        var provider = new firebase.auth.GoogleAuthProvider();
+
+        firebase.auth().signInWithPopup(provider);
+      }
+
+      function pinterestLogin(){
+        alert("log in to pinterest")
+      }
+
+      function tumblrLogin(){
+        alert("log in to tumblr")
+      }
+
+      function instaLogin(){
+        alert("log in to instagram")
+      }
+
+      function vimeoLogin(){
+        alert("log in to vimeo")
+      }
+
+      function youtubeLogin(){
+        alert("log in to youtube")
+      }
+
+
+      firebase.auth().signOut().then(function() {
+        // Sign-out successful.
+      }, function(error) {
+        // An error happened.
+      });
+
+///////////////////////button styling///////////////
+      function showInfo() {
+          if (document.getElementById('info').style.visibility == 'hidden'){
+             $(function(){
+                 document.getElementById('info').style.visibility = 'visible';
+             });
+          } else{
+              $(function(){
+                 document.getElementById('info').style.visibility = 'hidden';
+             });
+          }
+      }
+
+    var selected = 0;
+      function setColor(btn){
+
+        var property=document.getElementById(btn);
+        var color="rgba(0, 77, 255, 0.6)"
+
+        property.style.backgroundColor = color;
+        chosen = 1;
+
+      }
+
+    function selectAll(){
+
+        var color="rgba(0, 77, 255, 0.6)"
+
+
+        var property=document.getElementsByClassName("media1");
+        Boolean (selected);
+            if (!selected){
+              twitterLogin();
+              facebookLogin();
+              googleLogin();
+              tumblrLogin();
+              pinterestLogin();
+              instaLogin();
+              youtubeLogin();
+              vimeoLogin();
+                var i;
+                for (i = 0; i < property.length; i++) {
+                    property[i].style.backgroundColor = color;
+                }
+                selected = 1;
+            } else {
+              firebase.auth().signOut();
+                 for (i = 0; i < property.length; i++) {
+                    property[i].style.backgroundColor = "inherit";
+                }
+                selected = 0;
+            }
+    }
+  </script>
     <div id="start">
+      <div id="header">
+        <a  href="#start"><img id="logo_cnr" src="img/logo.png"/></a>
+
+      </div>
 
       <h1>WELCOME!</h1>
+
       <p>scroll to findYourself</p>
-      <image  id="startimg" src = "img/scroll.png"/>
+
+        <a  href="#social_media"><image id="startimg" src = "img/scroll.png"/></a>
 
 
 
+    </div>
 
-      <!-- <img id="start_img" src="img/homeScreen.png"/> -->
+    <div id="info">
+        <p>The aim of FindYourself is give you back your control over your online personality.
+FindYourself is an online search engine that scours the web
+for your digital data, then creates your unique personality profile based on this information.
+Your personality profile will be generated as a virtual environment, showing you where each piece of
+information came from,  and how it altered your online presence. In this space, you will be able to
+edit and remove any information that you don't want made public. FindYourself puts the power back in your hands.
+      </p>
 
     </div>
 
     <div id="social_media">
-      <div id = "mediaText">
-        <p>log in to social media</p>
-      </div>
+        <div id="hi">
+
+            <p id="select">Please select the social media accounts you wish to reclaim</p>
+            <button id="selectall" onclick="selectAll();">Select<br> All</button>
+        </div>
+<!-- buttons adapted from: https://dribbble.com/shots/1573944-Freebie-iOS7-Style-Social-Media-Icons -->
 
       <div id="MEDIA">
         <div class="mediaSpace" id="twitter">
           <div class="media">
-            <image src = "img/twitter.png"/>
+            <button class = "media1" id="twitterbtn" type = "submit" style = "background: url(img/twitter.png)" onclick="setColor('twitterbtn'); twitterLogin();"></button>
           </div>
-          <form>
-            <label>Username:</label><br>
-            <input id="firstname" required><br>
-          </form>
         </div>
+
         <div id="google" class="mediaSpace">
           <div class="media">
-            <image src = "img/facebook.png"/>
+
+            <button class = "media1" id="facebookbtn" type = "submit" style = "background: url(img/facebook.png)" onclick="setColor('facebookbtn'); facebookLogin();"></button>
           </div>
-          <form>
-            <label>Username:</label><br>
-            <input type="text" name="firstname" required><br>
-          </form>
         </div>
 
         <div class="mediaSpace" id="linkedIn">
           <div class="media">
-            <image src = "img/in.png"/>
+            <button class = "media1" id="inbtn" type = "submit" style = "background: url(img/in.png)" onclick="setColor('inbtn'); googleLogin();"></button>
           </div>
-          <form>
-            <label>Username:</label><br>
-            <input type="text" name="firstname" required><br>
-          </form>
+
         </div>
         <div id="pinterest" class="mediaSpace">
           <div class="media">
-            <image src = "img/pin.png"/>
+            <button class = "media1" id="pinbtn" type = "submit" style = "background: url(img/pin.png)" onclick="setColor('pinbtn'); pinterestLogin();"></button>
 
           </div>
-          <form>
-            <label>Username:</label><br>
-            <input type="text" name="firstname" required><br>
 
-          </form>
         </div>
 
         <div id="tumblr" class="mediaSpace">
           <div class="media">
-            <image src = "img/tumblr.png"/>
+            <button class = "media1" id="tblrbtn" type = "submit" style = "background: url(img/tumblr.png)" onclick="setColor('tblrbtn'); tumblrLogin();"></button>
           </div>
-          <form>
-            <label for "username">Username:</label><br>
-            <input id="firstname" required>
-          </form>
+
 
         </div>
         <div class="mediaSpace" id="instagram">
           <div class="media">
-            <image src = "img/insta.png"/>
+            <button class = "media1" id="instabtn" type = "submit" style = "background: url(img/insta.png)" onclick="setColor('instabtn'); instaLogin();"></button>
           </div>
-          <form>
-            <label>Username:</label><br>
-            <input id="firstname" required><br>
-          </form>
+
         </div>
         <div id="youtube" class="mediaSpace">
           <div class="media">
-            <image src = "img/youtube.png"/>
+            <button class = "media1" id="youbtn" type = "submit" style = "background: url(img/youtube.png)" onclick="setColor('youbtn'); youtubeLogin();"></button>
+
           </div>
-          <form>
-            <label>Username:</label><br>
-            <input type="text" name="firstname" required><br>
-          </form>
+
         </div>
 
         <div class="mediaSpace" id="reddit">
           <div class="media">
-            <image src = "img/vimeo.png"/>
+            <button class = "media1" id="vimeobtn" type = "submit" style = "background: url(img/vimeo.png)" onclick="setColor('vimeobtn'); vimeoLogin();"></button>
           </div>
-          <form>
-            <label>Username:</label><br>
-            <input type="text" name="firstname" required><br>
-          </form>
+
         </div>
       </div>
 
-    </div>
 
+        <a id="submit" href="vr.html">FIND ME</a></div>
 
-
-
-    <div id="scan">
-      <button id="scanButton" onclick="document.getElementById('scanImg').style.visibility='visible'" style="border:none;"><p>scan</p></button>
-      <img id="scanImg" src="img/scanImg.png"/>
-      <a id="submit" href="vr.html">SUBMIT</a>
     </div>
 
   </body>
